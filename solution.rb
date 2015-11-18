@@ -77,6 +77,14 @@ def continue?
   return continue
 end
 
+def goodbye
+  puts "|===============================================|"
+  puts "|       Good Bye! Thanks for playing!           |"
+  puts "|           Rock Paper Scissors!!!              |"
+  puts "|           by Eugene Chang 2015                |"
+  puts "|===============================================|"
+end
+
 #---------------- Main Program Starts Here ---------------
 
 #印出歡迎訊息
@@ -96,8 +104,4 @@ begin
 
 end while continue == "Y"
 # 若使用者回答 "N"，印出離開的訊息，不是就回到迴圈的上層繼續玩
-puts "|===============================================|"
-puts "|       Good Bye! Thanks for playing!           |"
-puts "|           Rock Paper Scissors!!!              |"
-puts "|           by Eugene Chang 2015                |"
-puts "|===============================================|"
+goodbye()
