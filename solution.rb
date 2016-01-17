@@ -8,30 +8,30 @@
 
 # 記住 method 是獨立出主程式的，要定義在主程式外面，而且是呼叫它的程式碼上方
 def get_computer_input
-  return ["R","P","S"].shuffle!.last
+  ["R","P","S"].shuffle!.last
 end
 
 def check_win(user_input, computer_input)
 
   if (user_input == computer_input)
-    return "It's a draw"
+    "It's a draw"
   elsif user_input == "R"
     if computer_input == "S"
-      return "You Win"
+      "You Win"
     elsif computer_input == "P"
-      return "You Lose"
+      "You Lose"
     end
   elsif user_input == "P"
     if computer_input == "R"
-      return "You Win"
+      "You Win"
     elsif computer_input == "S"
-      return "You Lose"
+      "You Lose"
     end
   elsif user_input == "S"
     if computer_input == "P"
-      return "You Win"
+      "You Win"
     elsif computer_input == "R"
-      return "You Lose"
+      "You Lose"
     end
   end
 
@@ -44,7 +44,7 @@ def get_input_string(input)
     "S" => "Scissors"
   }
 
-  return gestures[input]
+  gestures[input]
 end
 
 def print_result(user_input, computer_input, message)
@@ -65,7 +65,7 @@ def get_user_input
     user_input = gets.chomp.upcase
   end while !["R", "P", "S"].include?(user_input) 
 
-  return user_input
+  user_input
 end
 
 def continue?
@@ -74,7 +74,7 @@ def continue?
     continue = gets.chomp.upcase
   end while !["Y", "N"].include?(continue)
 
-  return continue
+  continue
 end
 
 def goodbye
